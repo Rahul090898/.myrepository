@@ -1,0 +1,50 @@
+//Question2 :- Take 10 Integer inputs from user and store them in an Array. Again ask user to enter a number and now tell user
+//             to check whether that number is present in an Array or not..?
+
+package classwork;
+import java.util.*;
+
+public class Homework2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int s = sc.nextInt();
+		int flag =0;
+		if(s<=0) {
+			System.out.println("Please enter valid array size");
+		}
+		else if(s>0 && s!=0){
+			int[] arr = new int[s];
+			System.out.println("Enter "+s+" array elements");
+			for(int i=0;i<arr.length;i++) {
+				arr[i] = sc.nextInt();
+			}
+			System.out.println("The array is");
+			for(int i=0;i<arr.length;i++) {
+				int nwarr = arr[i];
+				System.out.print(nwarr+"\t");
+			}
+			System.out.println("Enter a number");
+			int n = sc.nextInt();
+			if(n<0) {
+				System.out.println("Please enter a valid number");
+			}
+			else if(n>0 && n!=0) {
+				for(int i=0;i<arr.length;i++) {
+					if(arr[i]==n) {
+						flag =1;
+						System.out.println("The number "+n+" is present in the array");
+					}
+						
+				}
+				if(flag==0) {
+					System.out.println("The number "+n+" is not present in the array");
+				}
+			}
+		}
+		
+			
+	}
+
+}
